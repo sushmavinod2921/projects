@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fridge Hero 🍳</title>
+  <style>
+    :root {
+      --bg-a: #f8fbff;
+      --bg-b: #eef2ff;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --border: #e5e7eb;
+      --shadow: 0 20px 45px rgba(17, 24, 39, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(140deg, var(--bg-a), var(--bg-b));
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 760px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 36px 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #1e40af;
+      background: #dbeafe;
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .chip {
+      border: 1px dashed #c7d2fe;
+      background: #f8faff;
+      border-radius: 12px;
+      padding: 11px 12px;
+      color: #1f2937;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      padding: 13px 18px;
+      border-radius: 12px;
+      transition: background-color 0.2s ease, transform 0.05s ease;
+    }
+
+    .cta:hover {
+      background: var(--primary-hover);
+    }
+
+    .cta:active {
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <span class="badge">AI Recipe Assistant</span>
+    <h1>Fridge Hero 🍳</h1>
+    <p>
+      Turn random ingredients into a French-inspired dish in seconds. Enter your
+      top three ingredients and let Gemini create something delicious.
+    </p>
+
+    <section class="grid" aria-label="Supported inputs">
+      <div class="chip">Ingredient 1</div>
+      <div class="chip">Ingredient 2</div>
+      <div class="chip">Ingredient 3</div>
+    </section>
+
+    <a class="cta" href="http://localhost:8501" target="_blank" rel="noopener noreferrer">
+      Launch Streamlit App
+    </a>
+  </main>
+</body>
+</html>
